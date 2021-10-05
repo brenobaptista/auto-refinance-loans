@@ -2,9 +2,9 @@ import React from "react";
 import Card from "../../components/Card";
 import "./index.css";
 
-const Vehicle = () => {
+const Vehicles = () => {
   return (
-    <div className="vehicle">
+    <div className="vehicles">
       <div>
         <h1 className="select-loan">Select the loan you want to refinance</h1>
         <Card
@@ -42,4 +42,4 @@ const Vehicle = () => {
   );
 };
 
-export default Vehicle;
+export default Vehicles;
