@@ -1,0 +1,24 @@
+.offer {
+  margin: 32px 0;
+}
+
+.loanInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.discount {
+  margin: 16px 0;
+  font-weight: 600;
+  color: #000000;
+}
+
+.radio {
+  margin-left: 15px;
+}
+
+.textImportant {
+  font-weight: 600;
+  color: #000000;
+}
