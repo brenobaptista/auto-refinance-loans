@@ -13,6 +13,7 @@ const Congratulations = () => {
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
+            className={styles.stars}
           >
             <path
               strokeLinecap="round"

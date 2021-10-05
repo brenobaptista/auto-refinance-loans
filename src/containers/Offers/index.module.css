@@ -1,8 +1,21 @@
+@keyframes roll-right {
+  0% {
+    opacity: 0;
+    transform: translate(-16px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 .offers {
   display: flex;
   justify-content: center;
   padding: 32px 24px;
   color: #6b7280;
+  animation: roll-right 1s;
 }
 
 .title {
