@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./index.css";
 
 const Card = ({
+  vehicleId,
   photo,
   info,
   mileage,
@@ -39,9 +41,11 @@ const Card = ({
           <div>Time remaining</div>
           <div className="important">{timeRemaining}</div>
         </div>
-        <button type="button" className="btn">
-          Select loan
-        </button>
+        <Link to={`/offers/${vehicleId}`}>
+          <button type="button" className="btn">
+            Select loan
+          </button>
+        </Link>
       </div>
     </div>
   );
