@@ -1,0 +1,30 @@
+.offers {
+  display: flex;
+  justify-content: center;
+  padding: 32px 24px;
+  color: #6b7280;
+}
+
+.title {
+  margin-top: 16px;
+  font-size: 1.4rem;
+}
+
+.textImportant {
+  font-weight: 600;
+  color: #000000;
+}
+
+.btn {
+  width: 100%;
+  margin: 32px 0 16px;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 25px;
+  background-color: #808080;
+  color: #ffffff;
+  text-align: center;
+  font-size: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
