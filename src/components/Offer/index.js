@@ -12,7 +12,7 @@ const Offer = ({
   return (
     <div className={styles.offer}>
       <label className={styles.loanInfo}>
-        <span className={styles.discount}>
+        <span className={`${styles.discount} ${styles.textImportant}`}>
           Lower you payment by {discount} per month
         </span>
         <input

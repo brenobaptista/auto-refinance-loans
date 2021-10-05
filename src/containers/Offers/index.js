@@ -16,7 +16,7 @@ const Offers = ({ match, history }) => {
 
   return (
     <div className={styles.offers}>
-      <div>
+      <div className={styles.wrapper}>
         <Link to="/">
           <svg
             xmlns="http://www.w3.org/2000/svg"

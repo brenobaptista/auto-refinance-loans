@@ -17,6 +17,12 @@
   animation: roll-down 1s;
 }
 
+.wrapper {
+  max-width: 400px;
+}
+
 .title {
+  margin: 16px 0 48px;
   font-size: 1.5rem;
+  font-weight: 600;
 }

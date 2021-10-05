@@ -1,5 +1,7 @@
 .offer {
-  margin: 32px 0;
+  margin: 48px 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .loanInfo {
@@ -10,15 +12,13 @@
 
 .discount {
   margin: 16px 0;
-  font-weight: 600;
-  color: #000000;
 }
 
 .radio {
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
 .textImportant {
-  font-weight: 600;
+  font-weight: 500;
   color: #000000;
 }

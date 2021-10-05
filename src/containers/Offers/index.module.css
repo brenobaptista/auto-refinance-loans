@@ -18,9 +18,14 @@
   animation: roll-right 1s;
 }
 
+.wrapper {
+  max-width: 400px;
+}
+
 .title {
-  margin-top: 16px;
+  margin: 16px 0 48px;
   font-size: 1.4rem;
+  line-height: 1.4;
 }
 
 .textImportant {

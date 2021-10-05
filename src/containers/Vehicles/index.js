@@ -5,8 +5,10 @@ import styles from "./index.module.css";
 const Vehicles = () => {
   return (
     <div className={styles.vehicles}>
-      <div>
-        <h1 className={styles.title}>Select the loan you want to refinance</h1>
+      <div className={styles.wrapper}>
+        <div className={styles.title}>
+          Select the loan you want to refinance
+        </div>
         <Card
           vehicleId="1"
           photo="2019-honda-accord.jpg"
