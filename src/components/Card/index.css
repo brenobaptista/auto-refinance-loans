@@ -11,7 +11,7 @@
   padding: 0 16px;
 }
 
-.important {
+.text-important {
   font-weight: 600;
   color: #000000;
 }
@@ -32,12 +32,6 @@
 .loan-info {
   display: flex;
   justify-content: space-between;
-}
-
-.hr {
-  border: 0;
-  border-top: 2px solid #ededed;
-  margin: 1em 0;
 }
 
 .btn {

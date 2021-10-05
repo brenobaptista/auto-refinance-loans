@@ -17,29 +17,30 @@ const Card = ({
       <img src={photo} alt="Vehicle" className="vehicle-image" />
       <div className="card-info">
         <div className="vehicle-info">
-          <div className="important">{info}</div>
+          <div className="text-important">{info}</div>
           <div className="vehicle-mileage">
-            with an estimated <span className="important">{mileage}</span> miles
+            with an estimated <span className="text-important">{mileage}</span>{" "}
+            miles
           </div>
         </div>
         <div className="loan-info">
           <div>Lender</div>
-          <div className="important">{lender}</div>
+          <div className="text-important">{lender}</div>
         </div>
-        <hr className="hr" />
+        <hr />
         <div className="loan-info">
           <div>APR</div>
-          <div className="important">{annualPercentage}</div>
+          <div className="text-important">{annualPercentage}</div>
         </div>
-        <hr className="hr" />
+        <hr />
         <div className="loan-info">
           <div>Monthly payment</div>
-          <div className="important">{monthlyPayment}</div>
+          <div className="text-important">{monthlyPayment}</div>
         </div>
-        <hr className="hr" />
+        <hr />
         <div className="loan-info">
           <div>Time remaining</div>
-          <div className="important">{timeRemaining}</div>
+          <div className="text-important">{timeRemaining}</div>
         </div>
         <Link to={`/offers/${vehicleId}`}>
           <button type="button" className="btn">
