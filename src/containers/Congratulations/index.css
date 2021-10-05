@@ -1,0 +1,19 @@
+.congratulations {
+  height: 100vh;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 0 24px;
+}
+
+.title {
+  display: flex;
+  gap: 10px;
+  font-size: 1.5rem;
+  margin-top: 0;
+  padding-top: 32px;
+}
+
+.explanation {
+  color: #6a6a6a;
+  line-height: 1.4;
+}
