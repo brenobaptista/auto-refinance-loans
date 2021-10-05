@@ -36,7 +36,7 @@ const Offers = ({ match, history }) => {
         </Link>
         <div className={styles.title}>
           <span className={styles.textImportant}>Select a new loan</span> for
-          the Vehicle with ID {match.params.vehicleId}
+          the Vehicle with ID {match.params.loanId}
         </div>
         <form onSubmit={handleRefinanceSubmission}>
           <Offer

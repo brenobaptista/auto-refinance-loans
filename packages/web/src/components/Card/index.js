@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "./index.module.css";
 
 const Card = ({
-  vehicleId,
+  loanId,
   photo,
   info,
   mileage,
@@ -42,7 +42,7 @@ const Card = ({
           <div>Time remaining</div>
           <div className={styles.textImportant}>{timeRemaining}</div>
         </div>
-        <Link to={`/offers/${vehicleId}`}>
+        <Link to={`/offers/${loanId}`}>
           <button type="button" className={styles.btn}>
             Select loan
           </button>

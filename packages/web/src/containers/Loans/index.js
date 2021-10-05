@@ -2,15 +2,15 @@ import React from "react";
 import Card from "../../components/Card";
 import styles from "./index.module.css";
 
-const Vehicles = () => {
+const Loans = () => {
   return (
-    <div className={styles.vehicles}>
+    <div className={styles.loans}>
       <div className={styles.wrapper}>
         <div className={styles.title}>
           Select the loan you want to refinance
         </div>
         <Card
-          vehicleId="1"
+          loanId="1"
           photo="2019-honda-accord.jpg"
           info="2019 HONDA ACCORD"
           mileage="41,855"
@@ -20,7 +20,7 @@ const Vehicles = () => {
           timeRemaining="54/72 mo"
         />
         <Card
-          vehicleId="2"
+          loanId="2"
           photo="1965-volkswagen-beetle.jpg"
           info="2018 MERCEDES BENZ GLA CLASS 4D 4WD 250"
           mileage="932,671"
@@ -30,7 +30,7 @@ const Vehicles = () => {
           timeRemaining="50/60 mo"
         />
         <Card
-          vehicleId="3"
+          loanId="3"
           photo="2017-fiat-500.jpg"
           info="2017 CHEVROLET CAMARO 2D 2LT"
           mileage="68,138"
@@ -44,4 +44,4 @@ const Vehicles = () => {
   );
 };
 
-export default Vehicles;
+export default Loans;
