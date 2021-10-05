@@ -1,0 +1,55 @@
+.card {
+  max-width: 400px;
+  margin: 32px 0;
+  border-radius: 25px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.card-info {
+  padding: 0 16px;
+}
+
+.important {
+  font-weight: 600;
+  color: #000000;
+}
+
+.vehicle-image {
+  width: 100%;
+  border-radius: 25px 25px 0 0;
+}
+
+.vehicle-info {
+  margin: 24px 0;
+}
+
+.vehicle-mileage {
+  margin-top: 8px;
+}
+
+.loan-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hr {
+  border: 0;
+  border-top: 2px solid #ededed;
+  margin: 1em 0;
+}
+
+.btn {
+  width: 100%;
+  margin: 32px 0 16px;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 25px;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  font-size: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
