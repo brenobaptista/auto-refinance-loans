@@ -4,7 +4,7 @@ import "./index.css";
 const Congratulations = () => {
   return (
     <div className="congratulations">
-      <div>
+      <div className="wrapper">
         <h1 className="title">
           <svg
             xmlns="http://www.w3.org/2000/svg"
