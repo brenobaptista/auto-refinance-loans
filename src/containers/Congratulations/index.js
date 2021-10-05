@@ -1,11 +1,11 @@
 import React from "react";
-import "./index.css";
+import styles from "./index.module.css";
 
 const Congratulations = () => {
   return (
-    <div className="congratulations">
-      <div className="wrapper">
-        <h1 className="title">
+    <div className={styles.congratulations}>
+      <div className={styles.wrapper}>
+        <h1 className={styles.title}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -23,7 +23,7 @@ const Congratulations = () => {
           </svg>
           <span>Congratulations!</span>
         </h1>
-        <p className="explanation">
+        <p className={styles.explanation}>
           You're about to lower your monthly auto loan payment! A loan officer
           will reach out to you shortly to discuss the final steps and confirm
           the loan offer.

@@ -7,29 +7,29 @@
   font-size: 0.9rem;
 }
 
-.card-info {
+.cardInfo {
   padding: 0 16px;
 }
 
-.text-important {
+.textImportant {
   font-weight: 600;
   color: #000000;
 }
 
-.vehicle-image {
+.vehicleImage {
   width: 100%;
   border-radius: 25px 25px 0 0;
 }
 
-.vehicle-info {
+.vehicleInfo {
   margin: 24px 0;
 }
 
-.vehicle-mileage {
+.vehicleMileage {
   margin-top: 8px;
 }
 
-.loan-info {
+.loanInfo {
   display: flex;
   justify-content: space-between;
 }

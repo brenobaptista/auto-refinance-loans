@@ -1,12 +1,12 @@
 import React from "react";
 import Card from "../../components/Card";
-import "./index.css";
+import styles from "./index.module.css";
 
 const Vehicles = () => {
   return (
-    <div className="vehicles">
+    <div className={styles.vehicles}>
       <div>
-        <h1 className="select-loan">Select the loan you want to refinance</h1>
+        <h1 className={styles.title}>Select the loan you want to refinance</h1>
         <Card
           vehicleId="1"
           photo="2019-honda-accord.jpg"

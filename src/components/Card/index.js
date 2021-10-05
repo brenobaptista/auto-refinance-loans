@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./index.css";
+import styles from "./index.module.css";
 
 const Card = ({
   vehicleId,
@@ -13,37 +13,37 @@ const Card = ({
   timeRemaining,
 }) => {
   return (
-    <div className="card">
-      <img src={photo} alt="Vehicle" className="vehicle-image" />
-      <div className="card-info">
-        <div className="vehicle-info">
-          <div className="text-important">{info}</div>
-          <div className="vehicle-mileage">
-            with an estimated <span className="text-important">{mileage}</span>{" "}
-            miles
+    <div className={styles.card}>
+      <img src={photo} alt="Vehicle" className={styles.vehicleImage} />
+      <div className={styles.cardInfo}>
+        <div className={styles.vehicleInfo}>
+          <div className={styles.textImportant}>{info}</div>
+          <div className={styles.vehicleMileage}>
+            with an estimated{" "}
+            <span className={styles.textImportant}>{mileage}</span> miles
           </div>
         </div>
-        <div className="loan-info">
+        <div className={styles.loanInfo}>
           <div>Lender</div>
-          <div className="text-important">{lender}</div>
+          <div className={styles.textImportant}>{lender}</div>
         </div>
         <hr />
-        <div className="loan-info">
+        <div className={styles.loanInfo}>
           <div>APR</div>
-          <div className="text-important">{annualPercentage}</div>
+          <div className={styles.textImportant}>{annualPercentage}</div>
         </div>
         <hr />
-        <div className="loan-info">
+        <div className={styles.loanInfo}>
           <div>Monthly payment</div>
-          <div className="text-important">{monthlyPayment}</div>
+          <div className={styles.textImportant}>{monthlyPayment}</div>
         </div>
         <hr />
-        <div className="loan-info">
+        <div className={styles.loanInfo}>
           <div>Time remaining</div>
-          <div className="text-important">{timeRemaining}</div>
+          <div className={styles.textImportant}>{timeRemaining}</div>
         </div>
         <Link to={`/offers/${vehicleId}`}>
-          <button type="button" className="btn">
+          <button type="button" className={styles.btn}>
             Select loan
           </button>
         </Link>
