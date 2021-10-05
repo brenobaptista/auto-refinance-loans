@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "lender": "The Big Bank",
+    "annualPercentage": 0.142,
+    "loanBalance": 15000,
+    "monthlyPayment": 377.5,
+    "payPeriod": 54,
+    "totalPeriod": 72,
+    "vehicle": {
+      "make": "HONDA",
+      "model": "ACCORD",
+      "year": 2019
+    }
+  },
+  {
+    "id": 2,
+    "lender": "The Credit Union",
+    "annualPercentage": 0.136,
+    "loanBalance": 18500,
+    "monthlyPayment": 486.72,
+    "payPeriod": 50,
+    "totalPeriod": 60,
+    "vehicle": {
+      "make": "MERCEDES BENZ",
+      "model": "GLA CLASS 4D 4WD 250",
+      "year": 2018
+    }
+  },
+  {
+    "id": 3,
+    "lender": "The Auto-Lender",
+    "annualPercentage": 0.158,
+    "loanBalance": 13700,
+    "monthlyPayment": 527.4,
+    "payPeriod": 32,
+    "totalPeriod": 72,
+    "vehicle": {
+      "make": "CHEVROLET",
+      "model": "CAMARO 2D 2LT",
+      "year": 2017
+    }
+  }
+]
