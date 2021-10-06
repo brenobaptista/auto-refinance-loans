@@ -1,74 +1,113 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Offer from "../../components/Offer";
 import styles from "./index.module.css";
 
 const Offers = ({ match, history }) => {
-  const [offer, setOffer] = useState("");
+  const [offer, setOffer] = useState({});
+  const [loan, setLoan] = useState({});
+
+  useEffect(() => {
+    const fetchLoan = async () => {
+      const response = await fetch(
+        `http://localhost:3333/loans/${match.params.loanId}`
+      );
+
+      const loan = await response.json();
+
+      setLoan(loan);
+    };
+
+    fetchLoan();
+  }, [match.params.loanId]);
 
   const handleRefinanceSubmission = (event) => {
     event.preventDefault();
 
-    console.log(offer);
+    const refinance = { ...loan, ...offer };
 
-    offer !== "" && history.push("/congratulations");
+    const sendOffer = async () => {
+      await fetch("http://localhost:3333/offer", {
+        method: "POST",
+        body: JSON.stringify(refinance),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      });
+
+      history.push("/congratulations");
+    };
+
+    Object.entries(offer).length !== 0 && sendOffer();
+  };
+
+  const calculateMonthlyPayment = (newTotalPeriod) => {
+    const { loanBalance, annualPercentage } = loan;
+    const monthlyPercentage = annualPercentage / 12;
+
+    const monthlyPayment =
+      (loanBalance *
+        monthlyPercentage *
+        (1 + monthlyPercentage) ** newTotalPeriod) /
+      ((1 + monthlyPercentage) ** newTotalPeriod - 1);
+
+    return Math.round(monthlyPayment * 100) / 100;
   };
 
   return (
-    <div className={styles.offers}>
-      <div className={styles.wrapper}>
-        <Link to="/">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="#000000"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M11 17l-5-5m0 0l5-5m-5 5h12"
+    Object.entries(loan).length !== 0 && (
+      <div className={styles.offers}>
+        <div className={styles.wrapper}>
+          <Link to="/">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="#000000"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M11 17l-5-5m0 0l5-5m-5 5h12"
+              />
+            </svg>
+          </Link>
+          <div className={styles.title}>
+            <span className={styles.textImportant}>Select a new loan</span> for
+            the {loan.vehicle.year} {loan.vehicle.make} {loan.vehicle.model}
+          </div>
+          <form onSubmit={handleRefinanceSubmission}>
+            <Offer
+              setOffer={setOffer}
+              monthlyPayment={loan.monthlyPayment}
+              newAnnualPercentage={loan.annualPercentage / 2}
+              newMonthlyPayment={calculateMonthlyPayment(84)}
+              newTotalPeriod={84}
             />
-          </svg>
-        </Link>
-        <div className={styles.title}>
-          <span className={styles.textImportant}>Select a new loan</span> for
-          the Vehicle with ID {match.params.loanId}
+            <Offer
+              setOffer={setOffer}
+              monthlyPayment={loan.monthlyPayment}
+              newAnnualPercentage={loan.annualPercentage / 2}
+              newMonthlyPayment={calculateMonthlyPayment(72)}
+              newTotalPeriod={72}
+            />
+            <Offer
+              setOffer={setOffer}
+              monthlyPayment={loan.monthlyPayment}
+              newAnnualPercentage={loan.annualPercentage / 2}
+              newMonthlyPayment={calculateMonthlyPayment(60)}
+              newTotalPeriod={60}
+            />
+            <button type="submit" className={styles.btn}>
+              Finish
+            </button>
+          </form>
         </div>
-        <form onSubmit={handleRefinanceSubmission}>
-          <Offer
-            offer="01"
-            setOffer={setOffer}
-            discount="$246"
-            annualPercentage="2.49%"
-            monthlyPayment="$243.00"
-            timeRemaining="84 mo"
-          />
-          <Offer
-            offer="02"
-            setOffer={setOffer}
-            discount="$209"
-            annualPercentage="2.49%"
-            monthlyPayment="$280.00"
-            timeRemaining="72 mo"
-          />
-          <Offer
-            offer="03"
-            setOffer={setOffer}
-            discount="$172"
-            annualPercentage="2.49%"
-            monthlyPayment="$317.00"
-            timeRemaining="60 mo"
-          />
-          <button type="submit" className={styles.btn}>
-            Finish
-          </button>
-        </form>
       </div>
-    </div>
+    )
   );
 };
 
