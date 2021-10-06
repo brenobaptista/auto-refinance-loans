@@ -10,7 +10,7 @@ const Card = ({
   lender,
   annualPercentage,
   monthlyPayment,
-  payPeriod,
+  paidPeriod,
   totalPeriod,
 }) => {
   return (
@@ -42,7 +42,7 @@ const Card = ({
         <div className={styles.loanInfo}>
           <div>Time remaining</div>
           <div className={styles.textImportant}>
-            {payPeriod}/{totalPeriod} mo
+            {totalPeriod - paidPeriod}/{totalPeriod} mo
           </div>
         </div>
         <Link to={`/offers/${loanId}`}>

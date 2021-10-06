@@ -29,7 +29,7 @@ const Loans = () => {
             lender,
             annualPercentage,
             monthlyPayment,
-            payPeriod,
+            paidPeriod,
             totalPeriod,
             vehicle,
           }) => (
@@ -42,7 +42,7 @@ const Loans = () => {
               lender={lender}
               annualPercentage={annualPercentage}
               monthlyPayment={monthlyPayment}
-              payPeriod={payPeriod}
+              paidPeriod={paidPeriod}
               totalPeriod={totalPeriod}
             />
           )
