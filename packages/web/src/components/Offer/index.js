@@ -2,9 +2,9 @@ import React from "react";
 import styles from "./index.module.css";
 
 const Offer = ({
+  offer,
+  setOffer,
   discount,
-  offerId,
-  setOfferId,
   annualPercentage,
   monthlyPayment,
   timeRemaining,
@@ -18,8 +18,8 @@ const Offer = ({
         <input
           type="radio"
           name="offer"
-          value={offerId}
-          onChange={(event) => setOfferId(event.target.value)}
+          value={offer}
+          onChange={(event) => setOffer(event.target.value)}
           className={styles.radio}
         />
       </label>
