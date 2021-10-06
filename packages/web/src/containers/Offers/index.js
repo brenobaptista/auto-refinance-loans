@@ -4,14 +4,14 @@ import Offer from "../../components/Offer";
 import styles from "./index.module.css";
 
 const Offers = ({ match, history }) => {
-  const [loanId, setLoanId] = useState("");
+  const [offerId, setOfferId] = useState("");
 
   const handleRefinanceSubmission = (event) => {
     event.preventDefault();
 
-    console.log(loanId);
+    console.log(offerId);
 
-    loanId !== "" && history.push("/congratulations");
+    offerId !== "" && history.push("/congratulations");
   };
 
   return (
@@ -41,24 +41,24 @@ const Offers = ({ match, history }) => {
         <form onSubmit={handleRefinanceSubmission}>
           <Offer
             discount="$246"
-            loanId="01"
-            setLoanId={setLoanId}
+            offerId="01"
+            setOfferId={setOfferId}
             annualPercentage="2.49%"
             monthlyPayment="$243.00"
             timeRemaining="84 mo"
           />
           <Offer
             discount="$209"
-            loanId="02"
-            setLoanId={setLoanId}
+            offerId="02"
+            setOfferId={setOfferId}
             annualPercentage="2.49%"
             monthlyPayment="$280.00"
             timeRemaining="72 mo"
           />
           <Offer
             discount="$172"
-            loanId="03"
-            setLoanId={setLoanId}
+            offerId="03"
+            setOfferId={setOfferId}
             annualPercentage="2.49%"
             monthlyPayment="$317.00"
             timeRemaining="60 mo"

@@ -3,8 +3,8 @@ import styles from "./index.module.css";
 
 const Offer = ({
   discount,
-  loanId,
-  setLoanId,
+  offerId,
+  setOfferId,
   annualPercentage,
   monthlyPayment,
   timeRemaining,
@@ -18,8 +18,8 @@ const Offer = ({
         <input
           type="radio"
           name="offer"
-          value={loanId}
-          onChange={(event) => setLoanId(event.target.value)}
+          value={offerId}
+          onChange={(event) => setOfferId(event.target.value)}
           className={styles.radio}
         />
       </label>
