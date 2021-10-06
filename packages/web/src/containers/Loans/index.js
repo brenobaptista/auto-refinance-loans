@@ -34,6 +34,7 @@ const Loans = () => {
             vehicle,
           }) => (
             <Card
+              key={id}
               loanId={id}
               photo={`http://localhost:3333/vehicles/${vehicle.photo}`}
               info={`${vehicle.year} ${vehicle.make} ${vehicle.model}`}
