@@ -10,7 +10,8 @@ const Card = ({
   lender,
   annualPercentage,
   monthlyPayment,
-  timeRemaining,
+  payPeriod,
+  totalPeriod,
 }) => {
   return (
     <div className={styles.card}>
@@ -30,17 +31,19 @@ const Card = ({
         <hr />
         <div className={styles.loanInfo}>
           <div>APR</div>
-          <div className={styles.textImportant}>{annualPercentage}</div>
+          <div className={styles.textImportant}>{annualPercentage * 100}%</div>
         </div>
         <hr />
         <div className={styles.loanInfo}>
           <div>Monthly payment</div>
-          <div className={styles.textImportant}>{monthlyPayment}</div>
+          <div className={styles.textImportant}>${monthlyPayment}</div>
         </div>
         <hr />
         <div className={styles.loanInfo}>
           <div>Time remaining</div>
-          <div className={styles.textImportant}>{timeRemaining}</div>
+          <div className={styles.textImportant}>
+            {payPeriod}/{totalPeriod} mo
+          </div>
         </div>
         <Link to={`/offers/${loanId}`}>
           <button type="button" className={styles.btn}>

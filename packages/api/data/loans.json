@@ -8,9 +8,11 @@
     "payPeriod": 54,
     "totalPeriod": 72,
     "vehicle": {
+      "photo": "1.jpg",
       "make": "HONDA",
       "model": "ACCORD",
-      "year": 2019
+      "year": 2019,
+      "mileage": 41855
     }
   },
   {
@@ -22,9 +24,11 @@
     "payPeriod": 50,
     "totalPeriod": 60,
     "vehicle": {
+      "photo": "2.jpg",
       "make": "MERCEDES BENZ",
       "model": "GLA CLASS 4D 4WD 250",
-      "year": 2018
+      "year": 2018,
+      "mileage": 48531
     }
   },
   {
@@ -36,9 +40,11 @@
     "payPeriod": 32,
     "totalPeriod": 72,
     "vehicle": {
+      "photo": "3.jpg",
       "make": "CHEVROLET",
       "model": "CAMARO 2D 2LT",
-      "year": 2017
+      "year": 2017,
+      "mileage": 57890
     }
   }
 ]
