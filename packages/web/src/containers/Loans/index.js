@@ -7,7 +7,7 @@ const Loans = () => {
 
   useEffect(() => {
     const fetchLoans = async () => {
-      const response = await fetch("http://localhost:3333/loans.json");
+      const response = await fetch("http://localhost:3333/loans");
 
       const loans = await response.json();
 
