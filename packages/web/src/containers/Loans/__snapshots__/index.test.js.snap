@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="loans"
+  >
+    <div
+      class="wrapper"
+    >
+      <div
+        class="title"
+      >
+        Select the loan you want to refinance
+      </div>
+      <div
+        class="card"
+      >
+        <img
+          alt="Vehicle"
+          class="vehicleImage"
+          src="http://localhost:3333/vehicles/1.jpg"
+        />
+        <div
+          class="cardInfo"
+        >
+          <div
+            class="vehicleInfo"
+          >
+            <div
+              class="textImportant"
+            >
+              2019 HONDA ACCORD
+            </div>
+            <div
+              class="vehicleMileage"
+            >
+              with an estimated 
+              <span
+                class="textImportant"
+              >
+                41855
+              </span>
+               miles
+            </div>
+          </div>
+          <div
+            class="loanInfo"
+          >
+            <div>
+              Lender
+            </div>
+            <div
+              class="textImportant"
+            >
+              The Big Bank
+            </div>
+          </div>
+          <hr />
+          <div
+            class="loanInfo"
+          >
+            <div>
+              APR
+            </div>
+            <div
+              class="textImportant"
+            >
+              14.2%
+            </div>
+          </div>
+          <hr />
+          <div
+            class="loanInfo"
+          >
+            <div>
+              Monthly payment
+            </div>
+            <div
+              class="textImportant"
+            >
+              $377.5
+            </div>
+          </div>
+          <hr />
+          <div
+            class="loanInfo"
+          >
+            <div>
+              Time remaining
+            </div>
+            <div
+              class="textImportant"
+            >
+              54/72 mo
+            </div>
+          </div>
+          <a
+            href="/offers/1"
+          >
+            <button
+              class="btn"
+              type="button"
+            >
+              Select loan
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`matches snapshot when expection 1`] = `
+<DocumentFragment>
+  <div
+    class="loans"
+  >
+    <div
+      class="wrapper"
+    >
+      <div
+        class="title"
+      >
+        Select the loan you want to refinance
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
