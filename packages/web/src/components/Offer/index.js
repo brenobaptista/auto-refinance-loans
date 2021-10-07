@@ -1,28 +1,28 @@
-import React from "react";
-import styles from "./index.module.css";
+import React from 'react'
+import styles from './index.module.css'
 
 const Offer = ({
   setOffer,
   monthlyPayment,
   newAnnualPercentage,
   newMonthlyPayment,
-  newTotalPeriod,
+  newTotalPeriod
 }) => {
   return (
     <div className={styles.offer}>
       <label className={styles.loanInfo}>
         <span className={`${styles.discount} ${styles.textImportant}`}>
-          Lower you payment by {(monthlyPayment - newMonthlyPayment).toFixed(2)}{" "}
+          Lower you payment by {(monthlyPayment - newMonthlyPayment).toFixed(2)}{' '}
           per month
         </span>
         <input
-          type="radio"
-          name="offer"
+          type='radio'
+          name='offer'
           onChange={() =>
             setOffer({
               newAnnualPercentage,
               newMonthlyPayment,
-              newTotalPeriod,
+              newTotalPeriod
             })
           }
           className={styles.radio}
@@ -43,7 +43,7 @@ const Offer = ({
         <div className={styles.textImportant}>{newTotalPeriod} mo</div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Offer;
+export default Offer

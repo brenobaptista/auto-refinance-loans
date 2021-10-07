@@ -1,8 +1,8 @@
-import React from "react";
-import { render, fireEvent } from "@testing-library/react";
-import Offer from "./index";
+import React from 'react'
+import { render, fireEvent } from '@testing-library/react'
+import Offer from './index'
 
-test("matches snapshot", () => {
+test('matches snapshot', () => {
   const { asFragment } = render(
     <Offer
       setOffer={() => {}}
@@ -11,12 +11,12 @@ test("matches snapshot", () => {
       newMonthlyPayment={282.76}
       newTotalPeriod={84}
     />
-  );
+  )
 
-  expect(asFragment()).toMatchSnapshot();
-});
+  expect(asFragment()).toMatchSnapshot()
+})
 
-test("selects an option", async () => {
+test('selects an option', async () => {
   const { getByRole } = render(
     <Offer
       setOffer={() => {}}
@@ -25,17 +25,17 @@ test("selects an option", async () => {
       newMonthlyPayment={282.76}
       newTotalPeriod={84}
     />
-  );
+  )
 
-  const option = getByRole("radio", {
-    name: "Lower you payment by 94.74 per month",
-  });
+  const option = getByRole('radio', {
+    name: 'Lower you payment by 94.74 per month'
+  })
 
-  expect(option).toBeInTheDocument();
+  expect(option).toBeInTheDocument()
 
-  expect(option).not.toBeChecked();
+  expect(option).not.toBeChecked()
 
-  fireEvent.click(option);
+  fireEvent.click(option)
 
-  expect(option).toBeChecked();
-}, 10000);
+  expect(option).toBeChecked()
+}, 10000)

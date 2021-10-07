@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styles from "./index.module.css";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import styles from './index.module.css'
 
 const Card = ({
   loanId,
@@ -11,16 +11,16 @@ const Card = ({
   annualPercentage,
   monthlyPayment,
   paidPeriod,
-  totalPeriod,
+  totalPeriod
 }) => {
   return (
     <div className={styles.card}>
-      <img src={photo} alt="Vehicle" className={styles.vehicleImage} />
+      <img src={photo} alt='Vehicle' className={styles.vehicleImage} />
       <div className={styles.cardInfo}>
         <div className={styles.vehicleInfo}>
           <div className={styles.textImportant}>{info}</div>
           <div className={styles.vehicleMileage}>
-            with an estimated{" "}
+            with an estimated{' '}
             <span className={styles.textImportant}>{mileage}</span> miles
           </div>
         </div>
@@ -46,13 +46,13 @@ const Card = ({
           </div>
         </div>
         <Link to={`/offers/${loanId}`}>
-          <button type="button" className={styles.btn}>
+          <button type='button' className={styles.btn}>
             Select loan
           </button>
         </Link>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Card;
+export default Card

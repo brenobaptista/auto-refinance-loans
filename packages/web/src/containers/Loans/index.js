@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from "react";
-import Card from "../../components/Card";
-import styles from "./index.module.css";
+import React, { useState, useEffect } from 'react'
+import Card from '../../components/Card'
+import styles from './index.module.css'
 
 const Loans = () => {
-  const [loans, setLoans] = useState([]);
+  const [loans, setLoans] = useState([])
 
   useEffect(() => {
     const getLoans = async () => {
       try {
-        const response = await fetch("http://localhost:3333/loans");
+        const response = await fetch('http://localhost:3333/loans')
 
-        const loans = await response.json();
+        const loans = await response.json()
 
-        setLoans(loans);
+        setLoans(loans)
       } catch (error) {
-        console.error(error);
+        console.error(error)
       }
-    };
+    }
 
-    getLoans();
-  }, []);
+    getLoans()
+  }, [])
 
   return (
     <div className={styles.loans}>
@@ -35,7 +35,7 @@ const Loans = () => {
             monthlyPayment,
             paidPeriod,
             totalPeriod,
-            vehicle,
+            vehicle
           }) => (
             <Card
               key={id}
@@ -53,7 +53,7 @@ const Loans = () => {
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Loans;
+export default Loans

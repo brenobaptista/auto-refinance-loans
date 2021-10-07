@@ -1,9 +1,9 @@
-import React from "react";
-import { render } from "@testing-library/react";
-import Congratulations from "./index";
+import React from 'react'
+import { render } from '@testing-library/react'
+import Congratulations from './index'
 
-test("matches snapshot", () => {
-  const { asFragment } = render(<Congratulations />);
+test('matches snapshot', () => {
+  const { asFragment } = render(<Congratulations />)
 
-  expect(asFragment()).toMatchSnapshot();
-});
+  expect(asFragment()).toMatchSnapshot()
+})
