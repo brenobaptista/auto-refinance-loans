@@ -34,13 +34,12 @@ test("matches snapshot", async () => {
   });
 
   const vehicle = await findByText("2019 HONDA ACCORD");
-
   expect(vehicle).toBeInTheDocument();
 
   expect(asFragment()).toMatchSnapshot();
 });
 
-test("matches snapshot when expection", async () => {
+test("matches snapshot when expection", () => {
   fetch.mockReject(() => Promise.reject("API is down"));
 
   const { asFragment } = render(<Loans />, {
