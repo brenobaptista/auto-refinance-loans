@@ -49,8 +49,8 @@ const Offers = ({ match, history }) => {
     Object.entries(offer).length !== 0 && postOffer()
   }
 
-  const calculateMonthlyPayment = newTotalPeriod => {
-    const { loanBalance, annualPercentage } = loan
+  const calculateMonthlyPayment = (loanInstance, newTotalPeriod) => {
+    const { loanBalance, annualPercentage } = loanInstance
     const monthlyPercentage = annualPercentage / 12
 
     const monthlyPayment =
@@ -92,21 +92,21 @@ const Offers = ({ match, history }) => {
               setOffer={setOffer}
               monthlyPayment={loan.monthlyPayment}
               newAnnualPercentage={loan.annualPercentage / 2}
-              newMonthlyPayment={calculateMonthlyPayment(84)}
+              newMonthlyPayment={calculateMonthlyPayment(loan, 84)}
               newTotalPeriod={84}
             />
             <Offer
               setOffer={setOffer}
               monthlyPayment={loan.monthlyPayment}
               newAnnualPercentage={loan.annualPercentage / 2}
-              newMonthlyPayment={calculateMonthlyPayment(72)}
+              newMonthlyPayment={calculateMonthlyPayment(loan, 72)}
               newTotalPeriod={72}
             />
             <Offer
               setOffer={setOffer}
               monthlyPayment={loan.monthlyPayment}
               newAnnualPercentage={loan.annualPercentage / 2}
-              newMonthlyPayment={calculateMonthlyPayment(60)}
+              newMonthlyPayment={calculateMonthlyPayment(loan, 60)}
               newTotalPeriod={60}
             />
             <button type='submit' className={styles.btn}>
