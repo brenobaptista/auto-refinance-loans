@@ -6,15 +6,19 @@ const Loans = () => {
   const [loans, setLoans] = useState([]);
 
   useEffect(() => {
-    const fetchLoans = async () => {
-      const response = await fetch("http://localhost:3333/loans");
+    const getLoans = async () => {
+      try {
+        const response = await fetch("http://localhost:3333/loans");
 
-      const loans = await response.json();
+        const loans = await response.json();
 
-      setLoans(loans);
+        setLoans(loans);
+      } catch (error) {
+        console.error(error);
+      }
     };
 
-    fetchLoans();
+    getLoans();
   }, []);
 
   return (

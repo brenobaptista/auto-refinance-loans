@@ -8,17 +8,21 @@ const Offers = ({ match, history }) => {
   const [loan, setLoan] = useState({});
 
   useEffect(() => {
-    const fetchLoan = async () => {
-      const response = await fetch(
-        `http://localhost:3333/loans/${match.params.loanId}`
-      );
+    const getLoan = async () => {
+      try {
+        const response = await fetch(
+          `http://localhost:3333/loans/${match.params.loanId}`
+        );
 
-      const loan = await response.json();
+        const loan = await response.json();
 
-      setLoan(loan);
+        setLoan(loan);
+      } catch (error) {
+        console.error(error);
+      }
     };
 
-    fetchLoan();
+    getLoan();
   }, [match.params.loanId]);
 
   const handleRefinanceSubmission = (event) => {
@@ -26,19 +30,23 @@ const Offers = ({ match, history }) => {
 
     const refinance = { ...loan, ...offer };
 
-    const sendOffer = async () => {
-      await fetch("http://localhost:3333/offer", {
-        method: "POST",
-        body: JSON.stringify(refinance),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      });
+    const postOffer = async () => {
+      try {
+        await fetch("http://localhost:3333/offer", {
+          method: "POST",
+          body: JSON.stringify(refinance),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+        });
 
-      history.push("/congratulations");
+        history.push("/congratulations");
+      } catch (error) {
+        console.error(error);
+      }
     };
 
-    Object.entries(offer).length !== 0 && sendOffer();
+    Object.entries(offer).length !== 0 && postOffer();
   };
 
   const calculateMonthlyPayment = (newTotalPeriod) => {
