@@ -6,7 +6,9 @@
 
 This is a monorepo that uses Yarn Workspaces.
 
-```
+### Essencial scripts
+
+```sh
 Install dependencies:
 $ yarn
 
@@ -15,6 +17,19 @@ $ yarn api:start
 
 Start the web package:
 $ yarn web:start
+```
+
+### Development scripts
+
+```sh
+Run tests (web):
+$ yarn web:test
+
+Check tests coverage (web):
+$ yarn web:test:coverage
+
+Update dependencies (web and api):
+$ yarn dependencies
 ```
 
 ## Author
