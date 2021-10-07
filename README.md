@@ -28,6 +28,10 @@ $ yarn web:test
 Check tests coverage (web):
 $ yarn web:test:coverage
 
+Lint files:
+$ yarn api:lint
+$ yarn web:lint
+
 Prettier files (web and api):
 $ yarn prettier
 
