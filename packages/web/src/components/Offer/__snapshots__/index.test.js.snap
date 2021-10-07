@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="offer"
+  >
+    <label
+      class="loanInfo"
+    >
+      <span
+        class="discount textImportant"
+      >
+        Lower you payment by 94.74 per month
+      </span>
+      <input
+        class="radio"
+        name="offer"
+        type="radio"
+      />
+    </label>
+    <div
+      class="loanInfo"
+    >
+      <div>
+        APR
+      </div>
+      <div
+        class="textImportant"
+      >
+        7.1%
+      </div>
+    </div>
+    <hr />
+    <div
+      class="loanInfo"
+    >
+      <div>
+        Monthly payment
+      </div>
+      <div
+        class="textImportant"
+      >
+        $282.76
+      </div>
+    </div>
+    <hr />
+    <div
+      class="loanInfo"
+    >
+      <div>
+        Time remaining
+      </div>
+      <div
+        class="textImportant"
+      >
+        84 mo
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
