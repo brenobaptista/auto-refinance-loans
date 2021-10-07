@@ -8,6 +8,7 @@
     "api:dev": "yarn --cwd packages/api dev",
     "web:start": "yarn --cwd packages/web start",
     "web:test": "yarn --cwd packages/web test",
-    "web:test:coverage": "yarn --cwd packages/web test:coverage"
+    "web:test:coverage": "yarn --cwd packages/web test:coverage",
+    "dependencies": "yarn upgrade-interactive --latest"
   }
 }
