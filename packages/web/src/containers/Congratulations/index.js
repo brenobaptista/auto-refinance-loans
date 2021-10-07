@@ -25,7 +25,7 @@ const Congratulations = () => {
           <span>Congratulations!</span>
         </h1>
         <p className={styles.explanation}>
-          You're about to lower your monthly auto loan payment! A loan officer
+          You’re about to lower your monthly auto loan payment! A loan officer
           will reach out to you shortly to discuss the final steps and confirm
           the loan offer.
         </p>
