@@ -7,7 +7,7 @@
     "api:start": "yarn --cwd packages/api start",
     "api:dev": "yarn --cwd packages/api dev",
     "web:start": "yarn --cwd packages/web start",
-    "web:build": "yarn --cwd packages/web build",
-    "web:test": "yarn --cwd packages/web test"
+    "web:test": "yarn --cwd packages/web test",
+    "web:test:coverage": "yarn --cwd packages/web test:coverage"
   }
 }
