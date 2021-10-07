@@ -28,6 +28,9 @@ $ yarn web:test
 Check tests coverage (web):
 $ yarn web:test:coverage
 
+Prettier files (web and api):
+$ yarn prettier
+
 Update dependencies (web and api):
 $ yarn dependencies
 ```

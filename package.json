@@ -9,6 +9,7 @@
     "web:start": "yarn --cwd packages/web start",
     "web:test": "yarn --cwd packages/web test",
     "web:test:coverage": "yarn --cwd packages/web test:coverage",
+    "prettier": "prettier --write .",
     "dependencies": "yarn upgrade-interactive --latest"
   }
 }
