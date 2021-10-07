@@ -24,7 +24,7 @@ app.get('/loans/:id', (req, res) => {
   res.send(loan)
 })
 
-app.post('/offer', (req, res) => {
+app.post('/offer', req => {
   console.log(req.body)
 })
 
