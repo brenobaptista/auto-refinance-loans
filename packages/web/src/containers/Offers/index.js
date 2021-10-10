@@ -65,29 +65,34 @@ const Offers = ({ match, history }) => {
   return (
     Object.entries(loan).length !== 0 && (
       <div className={styles.offers}>
-        <div className={styles.wrapper}>
-          <Link to='/'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              width='24'
-              height='24'
-              fill='none'
-              viewBox='0 0 24 24'
-              stroke='#000000'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth='2'
-                d='M11 17l-5-5m0 0l5-5m-5 5h12'
-              />
-            </svg>
-          </Link>
-          <div className={styles.title}>
-            <span className={styles.textImportant}>Select a new loan</span> for
-            the {loan.vehicle.year} {loan.vehicle.make} {loan.vehicle.model}
+        <div className={styles.titleWrapper}>
+          <div>
+            <Link to='/'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='24'
+                height='24'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='#000000'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth='2'
+                  d='M11 17l-5-5m0 0l5-5m-5 5h12'
+                />
+              </svg>
+            </Link>
+            <div className={styles.title}>
+              <span className={styles.textImportant}>Select a new loan</span>{' '}
+              for the {loan.vehicle.year} {loan.vehicle.make}{' '}
+              {loan.vehicle.model}
+            </div>
           </div>
-          <form onSubmit={handleRefinanceSubmission}>
+        </div>
+        <form onSubmit={handleRefinanceSubmission}>
+          <div className={styles.offersWrapper}>
             <Offer
               setOffer={setOffer}
               monthlyPayment={loan.monthlyPayment}
@@ -109,11 +114,13 @@ const Offers = ({ match, history }) => {
               newMonthlyPayment={calculateMonthlyPayment(loan, 60)}
               newTotalPeriod={60}
             />
+          </div>
+          <div className={styles.btnWrapper}>
             <button type='submit' className={styles.btn}>
               Finish
             </button>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
     )
   )

@@ -12,17 +12,34 @@
 
 .offers {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   padding: 32px 24px;
   color: #6b7280;
   animation: roll-right 1s;
 }
 
-.wrapper {
-  max-width: 400px;
+.offersWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 32px;
+}
+
+@media (max-width: 1024px) {
+  .offersWrapper {
+    flex-direction: column;
+  }
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .title {
+  max-width: 480px;
   margin: 16px 0 48px;
   font-size: 1.4rem;
   line-height: 1.4;
@@ -34,8 +51,9 @@
 }
 
 .btn {
+  max-width: 300px;
   width: 100%;
-  margin: 32px 0 16px;
+  margin-top: 48px;
   padding: 16px 32px;
   border: none;
   border-radius: 25px;
@@ -45,4 +63,8 @@
   font-size: inherit;
   font-weight: 600;
   cursor: pointer;
+}
+
+.btnWrapper {
+  text-align: center;
 }
