@@ -31,7 +31,9 @@ const Card = ({
         <hr />
         <div className={styles.loanInfo}>
           <div>APR</div>
-          <div className={styles.textImportant}>{annualPercentage * 100}%</div>
+          <div className={styles.textImportant}>
+            {(annualPercentage * 100).toFixed(2)}%
+          </div>
         </div>
         <hr />
         <div className={styles.loanInfo}>
