@@ -23,10 +23,8 @@ const Loans = () => {
 
   return (
     <div className={styles.loans}>
-      <div className={styles.wrapper}>
-        <div className={styles.title}>
-          Select the loan you want to refinance
-        </div>
+      <div className={styles.title}>Select the loan you want to refinance</div>
+      <div className={styles.loansWrapper}>
         {loans.map(
           ({
             id,
