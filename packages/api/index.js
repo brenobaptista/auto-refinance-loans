@@ -24,8 +24,10 @@ app.get('/loans/:id', (req, res) => {
   res.send(loan)
 })
 
-app.post('/offer', req => {
+app.post('/offer', (req, res) => {
   console.log(req.body)
+
+  res.send(req.body)
 })
 
 app.listen(3333)
