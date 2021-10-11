@@ -12,11 +12,20 @@
 
 .offers {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  padding: 32px 24px;
+  align-items: center;
+  padding: 0 24px;
+  height: 100vh;
   color: #6b7280;
   animation: roll-right 1s;
+}
+
+@media (max-width: 1024px) {
+  .offers {
+    display: block;
+    height: 100%;
+    padding: 32px 24px;
+  }
 }
 
 .offersWrapper {
