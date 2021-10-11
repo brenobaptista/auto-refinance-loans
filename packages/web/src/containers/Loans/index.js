@@ -23,32 +23,36 @@ const Loans = () => {
 
   return (
     <div className={styles.loans}>
-      <div className={styles.title}>Select the loan you want to refinance</div>
-      <div className={styles.loansWrapper}>
-        {loans.map(
-          ({
-            id,
-            lender,
-            annualPercentage,
-            monthlyPayment,
-            paidPeriod,
-            totalPeriod,
-            vehicle
-          }) => (
-            <Card
-              key={id}
-              loanId={id}
-              photo={`http://localhost:3333/vehicles/${vehicle.photo}`}
-              info={`${vehicle.year} ${vehicle.make} ${vehicle.model}`}
-              mileage={vehicle.mileage}
-              lender={lender}
-              annualPercentage={annualPercentage}
-              monthlyPayment={monthlyPayment}
-              paidPeriod={paidPeriod}
-              totalPeriod={totalPeriod}
-            />
-          )
-        )}
+      <div>
+        <div className={styles.title}>
+          Select the loan you want to refinance
+        </div>
+        <div className={styles.loansWrapper}>
+          {loans.map(
+            ({
+              id,
+              lender,
+              annualPercentage,
+              monthlyPayment,
+              paidPeriod,
+              totalPeriod,
+              vehicle
+            }) => (
+              <Card
+                key={id}
+                loanId={id}
+                photo={`http://localhost:3333/vehicles/${vehicle.photo}`}
+                info={`${vehicle.year} ${vehicle.make} ${vehicle.model}`}
+                mileage={vehicle.mileage}
+                lender={lender}
+                annualPercentage={annualPercentage}
+                monthlyPayment={monthlyPayment}
+                paidPeriod={paidPeriod}
+                totalPeriod={totalPeriod}
+              />
+            )
+          )}
+        </div>
       </div>
     </div>
   )

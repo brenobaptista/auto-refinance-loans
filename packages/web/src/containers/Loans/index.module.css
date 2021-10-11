@@ -11,8 +11,19 @@
 }
 
 .loans {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   padding: 0 24px;
   animation: roll-down 1s;
+}
+
+@media (max-width: 1024px) {
+  .loans {
+    display: block;
+    height: 100%;
+  }
 }
 
 .loansWrapper {
