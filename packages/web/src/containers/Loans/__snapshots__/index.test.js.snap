@@ -5,106 +5,108 @@ exports[`matches snapshot 1`] = `
   <div
     class="loans"
   >
-    <div
-      class="wrapper"
-    >
+    <div>
       <div
         class="title"
       >
         Select the loan you want to refinance
       </div>
       <div
-        class="card"
+        class="loansWrapper"
       >
-        <img
-          alt="Vehicle"
-          class="vehicleImage"
-          src="http://localhost:3333/vehicles/1.jpg"
-        />
         <div
-          class="cardInfo"
+          class="card"
         >
+          <img
+            alt="Vehicle"
+            class="vehicleImage"
+            src="http://localhost:3333/vehicles/1.jpg"
+          />
           <div
-            class="vehicleInfo"
+            class="cardInfo"
           >
             <div
-              class="textImportant"
+              class="vehicleInfo"
             >
-              2019 HONDA ACCORD
-            </div>
-            <div
-              class="vehicleMileage"
-            >
-              with an estimated 
-              <span
+              <div
                 class="textImportant"
               >
-                41855
-              </span>
-               miles
-            </div>
-          </div>
-          <div
-            class="loanInfo"
-          >
-            <div>
-              Lender
-            </div>
-            <div
-              class="textImportant"
-            >
-              The Big Bank
-            </div>
-          </div>
-          <hr />
-          <div
-            class="loanInfo"
-          >
-            <div>
-              APR
+                2019 HONDA ACCORD
+              </div>
+              <div
+                class="vehicleMileage"
+              >
+                with an estimated 
+                <span
+                  class="textImportant"
+                >
+                  41855
+                </span>
+                 miles
+              </div>
             </div>
             <div
-              class="textImportant"
+              class="loanInfo"
             >
-              14.2%
+              <div>
+                Lender
+              </div>
+              <div
+                class="textImportant"
+              >
+                The Big Bank
+              </div>
             </div>
-          </div>
-          <hr />
-          <div
-            class="loanInfo"
-          >
-            <div>
-              Monthly payment
-            </div>
+            <hr />
             <div
-              class="textImportant"
+              class="loanInfo"
             >
-              $377.5
+              <div>
+                APR
+              </div>
+              <div
+                class="textImportant"
+              >
+                14.20%
+              </div>
             </div>
-          </div>
-          <hr />
-          <div
-            class="loanInfo"
-          >
-            <div>
-              Time remaining
-            </div>
+            <hr />
             <div
-              class="textImportant"
+              class="loanInfo"
             >
-              54/72 mo
+              <div>
+                Monthly payment
+              </div>
+              <div
+                class="textImportant"
+              >
+                $377.5
+              </div>
             </div>
-          </div>
-          <a
-            href="/offers/1"
-          >
-            <button
-              class="btn"
-              type="button"
+            <hr />
+            <div
+              class="loanInfo"
             >
-              Select loan
-            </button>
-          </a>
+              <div>
+                Time remaining
+              </div>
+              <div
+                class="textImportant"
+              >
+                54/72 mo
+              </div>
+            </div>
+            <a
+              href="/offers/1"
+            >
+              <button
+                class="btn"
+                type="button"
+              >
+                Select loan
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -117,14 +119,15 @@ exports[`matches snapshot when expection 1`] = `
   <div
     class="loans"
   >
-    <div
-      class="wrapper"
-    >
+    <div>
       <div
         class="title"
       >
         Select the loan you want to refinance
       </div>
+      <div
+        class="loansWrapper"
+      />
     </div>
   </div>
 </DocumentFragment>
