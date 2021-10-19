@@ -1,6 +1,6 @@
-# WithClutch
+# Auto Refinance Loans
 
-> WithClutch take-home exercise
+> Auto refinance loans exercise
 
 ## Getting Started
 
