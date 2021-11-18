@@ -1,4 +1,3 @@
-import React from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 import Congratulations from './containers/Congratulations'
 import Offers from './containers/Offers'
